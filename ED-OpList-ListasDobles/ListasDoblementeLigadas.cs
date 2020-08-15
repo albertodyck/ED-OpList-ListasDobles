@@ -103,5 +103,32 @@ namespace ED_OpList_ListasDobles
             return null;
         }
 
+        public Nodo BuscarIndice(int indice)
+        {
+            int Indice = -1;
+
+            if (ValidaVacia())
+            {
+                return null;
+            }
+
+            nodoActual = nodoInicial;
+
+            while (nodoActual.Siguiente != null)
+            {
+                nodoActual = nodoActual.Siguiente;
+                Indice++;
+
+                if (Indice ==indice)
+                {
+                    return nodoActual;
+                }
+            }
+
+            return null;
+        }
+
+
+
     }
 }

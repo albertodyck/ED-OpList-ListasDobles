@@ -30,6 +30,19 @@ namespace ED_OpList_ListasDobles
             }
 
 
+            Console.WriteLine("----- Buscando por indice -----");
+            int Indice = 1;
+            Nodo nodoIndice = lista.BuscarIndice(Indice);
+            if (nodoIndice == null)
+            {
+                Console.WriteLine("No se encontró");
+            }
+            else
+            {
+                Console.WriteLine($"Se encontró {nodoIndice.Dato} en el indice {Indice}");
+            }
+
+
 
         }
     }
