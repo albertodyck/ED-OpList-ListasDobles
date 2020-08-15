@@ -80,5 +80,28 @@ namespace ED_OpList_ListasDobles
 
         }
 
+        public Nodo Buscar(string dato)
+        {
+            //validamos que no este vacio
+            if (ValidaVacia())
+            {
+                return null;
+            }
+
+            Nodo nodoBusqueda = nodoInicial;
+
+            while (nodoBusqueda.Siguiente != null)
+            {
+                nodoBusqueda = nodoBusqueda.Siguiente;
+                //Situados en el siguiente
+                if (nodoBusqueda.Dato ==dato)
+                {
+                    return nodoBusqueda;
+                }
+            }
+
+            return null;
+        }
+
     }
 }

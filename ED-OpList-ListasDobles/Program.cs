@@ -17,6 +17,20 @@ namespace ED_OpList_ListasDobles
 
             lista.AgregarNodoInicio("Cero");
             Console.WriteLine(lista.RecorrerLista());
+
+            Console.WriteLine("--------Buscando Dos--------");
+            Nodo nodo = lista.Buscar("Dos");
+            if (nodo == null)
+            {
+                Console.WriteLine("No se encontro");
+            }
+            else
+            {
+                Console.WriteLine($"Se encontro {nodo.Dato}");
+            }
+
+
+
         }
     }
 }
