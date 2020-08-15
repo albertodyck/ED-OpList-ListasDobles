@@ -54,6 +54,10 @@ namespace ED_OpList_ListasDobles
                 Console.WriteLine($"Se encontró {nodoAnterior.Dato}");
             }
 
+
+            Console.WriteLine("----- Eliminando un nodo -----");
+            lista.BorrarNodo("Dos");
+            Console.WriteLine(lista.RecorrerLista());
         }
     }
 }

@@ -148,5 +148,23 @@ namespace ED_OpList_ListasDobles
             return null;
         }
 
+        public void BorrarNodo(string dato)
+        {
+            if (!ValidaVacia())
+            {
+                nodoActual = Buscar(dato);
+
+                if (nodoActual != null)
+                {
+                    Nodo nodoAnterior = nodoActual.Anterior;
+
+                    Nodo nodoSiguiente = nodoActual.Siguiente;
+
+                    nodoAnterior.Siguiente = nodoActual.Siguiente;
+                    nodoSiguiente.Anterior = nodoActual.Anterior;
+                }
+            }
+        }
+
     }
 }
