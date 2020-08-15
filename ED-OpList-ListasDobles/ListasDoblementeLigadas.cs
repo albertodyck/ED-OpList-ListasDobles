@@ -8,8 +8,6 @@ namespace ED_OpList_ListasDobles
     {
         private Nodo nodoInicial;//No se utilizara solo marca el inicio
         private Nodo nodoActual;
-        private Nodo nodoFinal;
-        private int elementos;
 
         public ListasDoblementeLigadas()
         {
@@ -67,5 +65,20 @@ namespace ED_OpList_ListasDobles
             //en nodo actual cuya propiedad siguiente era nulo ahora apuntara al nuevo nodo
             nodoActual.Siguiente = nodoNuevo;
         }
+
+        public void AgregarNodoInicio(string dato)
+        {
+            //nos colocamos al inicio
+            nodoActual = nodoInicial;
+
+            Nodo nodoNuevo = new Nodo();
+            nodoNuevo.Dato = dato;
+            nodoNuevo.Anterior = nodoInicial;
+            nodoNuevo.Siguiente = nodoInicial.Siguiente;
+            nodoInicial.Siguiente = nodoNuevo;
+            nodoNuevo.Siguiente.Anterior = nodoNuevo;
+
+        }
+
     }
 }
