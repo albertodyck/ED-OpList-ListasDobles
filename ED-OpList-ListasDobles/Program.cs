@@ -6,7 +6,9 @@ namespace ED_OpList_ListasDobles
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ListasDoblementeLigadas lista = new ListasDoblementeLigadas();
+            Console.WriteLine(lista.RecorrerLista());
+
         }
     }
 }
