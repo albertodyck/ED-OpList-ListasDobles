@@ -61,7 +61,7 @@ namespace ED_OpList_ListasDobles
             //establecemos su propiedad siguiente en nulo al ser el ultimo enlace
             nodoNuevo.Siguiente = null;
             //establecemos su propiedad anterior apuntando al inicio
-            nodoNuevo.Anterior = nodoInicial;
+            nodoNuevo.Anterior = nodoActual;
             //en nodo actual cuya propiedad siguiente era nulo ahora apuntara al nuevo nodo
             nodoActual.Siguiente = nodoNuevo;
         }
@@ -128,7 +128,25 @@ namespace ED_OpList_ListasDobles
             return null;
         }
 
+        public Nodo BuscarAnterior(string dato)
+        {
+            if (ValidaVacia())
+            {
+                return null;
+            }
 
+            Nodo nodoBusqueda = nodoInicial;
+            while (nodoBusqueda.Siguiente != null)
+            {
+                nodoBusqueda = nodoBusqueda.Siguiente;
+                if (nodoBusqueda.Dato == dato)
+                {
+                    return nodoBusqueda.Anterior;
+                }
+            }
+
+            return null;
+        }
 
     }
 }

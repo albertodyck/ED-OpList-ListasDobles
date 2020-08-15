@@ -43,6 +43,16 @@ namespace ED_OpList_ListasDobles
             }
 
 
+            Console.WriteLine("----- Buscando nodo anterior -----");
+            Nodo nodoAnterior = lista.BuscarAnterior("Dos");
+            if (nodoAnterior == null)
+            {
+                Console.WriteLine("No se encontró");
+            }
+            else
+            {
+                Console.WriteLine($"Se encontró {nodoAnterior.Dato}");
+            }
 
         }
     }
