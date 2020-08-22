@@ -166,5 +166,26 @@ namespace ED_OpList_ListasDobles
             }
         }
 
+        public Nodo BuscarSiguiente(string dato)
+        {
+            if (ValidaVacia())
+            {
+                return null;
+            }
+
+            Nodo nodoBusqueda = nodoInicial;
+            while (nodoBusqueda.Siguiente != null)
+            {
+                nodoBusqueda = nodoBusqueda.Siguiente;
+                if (nodoBusqueda.Dato == dato)
+                {
+                    return nodoBusqueda.Siguiente;
+                }
+            }
+
+            return null;
+
+        }
+
     }
 }

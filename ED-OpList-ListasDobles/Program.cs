@@ -54,6 +54,16 @@ namespace ED_OpList_ListasDobles
                 Console.WriteLine($"Se encontró {nodoAnterior.Dato}");
             }
 
+            Console.WriteLine("----- Buscando nodo Siguiente -----");
+            Nodo nodoSiguiente = lista.BuscarSiguiente("Dos");
+            if (nodoSiguiente == null)
+            {
+                Console.WriteLine("No se encontró");
+            }
+            else
+            {
+                Console.WriteLine($"Se encontró {nodoSiguiente.Dato}");
+            }
 
             Console.WriteLine("----- Eliminando un nodo -----");
             lista.BorrarNodo("Dos");
